@@ -20,4 +20,10 @@ print(arr)
 
 arr.delete(2)
 print(arr)
+
+arr.insert(2, 2)
+print(arr)
+
+for x in arr:
+    print(x)
 # Done testing the Array data structure

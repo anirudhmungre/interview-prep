@@ -9,6 +9,10 @@ class Array(object):
 
     def __len__(self):
         return self._size
+
+    def __iter__(self):
+        for value in self._data:
+            yield value
     
     def __check_index(self, index):
         if abs(index) > len(self)-1:
