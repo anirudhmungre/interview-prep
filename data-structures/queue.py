@@ -15,11 +15,11 @@ class Queue(object):
         return True
 
     def _check_has_data(self) -> bool:
-        if self.isEmpty():
+        if self.is_Empty():
             raise IndexError('Empty Queue has no more data.')
         return True
     
-    def enqueue(self, value):
+    def enqueue(self, value) -> None:
         if self._check_type(value):
             self._data.insert(0, value)
 
@@ -27,7 +27,7 @@ class Queue(object):
         if self._check_has_data():
             return self._data.pop()
 
-    def isEmpty(self):
+    def is_Empty(self) -> bool:
         return len(self._data) <= 0
 
     def top(self):

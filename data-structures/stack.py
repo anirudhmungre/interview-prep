@@ -61,17 +61,17 @@ class Stack(object):
         >>> s._check_has_data()
         True
         '''
-        if self.isEmpty():
+        if self.is_Empty():
             raise IndexError('Empty Stack has no more data.')
         return True
 
-    def isEmpty(self) -> bool:
+    def is_Empty(self) -> bool:
         '''Returns boolean that says if there is no more data in the stack
         >>> s = Stack(int)
-        >>> s.isEmpty()
+        >>> s.is_Empty()
         True
         >>> s.push(1)
-        >>> s.isEmpty()
+        >>> s.is_Empty()
         False
         '''
         return len(self._data) <= 0
